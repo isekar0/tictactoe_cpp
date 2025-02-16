@@ -63,21 +63,21 @@ int getTerminal(const int player, const vector<int> grid, const vector<int> vali
     }
     // Check n in row
     for (int i = 0; i < SIZE - 2; i++) {
-        if ((grid[i] != 0 && grid[i + 1] != 0 && grid[i + 2] != 0) && (grid[i] == grid[i + 1] == grid[i + 2]))
+        if ((grid[i] != 0 && grid[i + 1] != 0 && grid[i + 2] != 0) && (grid[i] == grid[i + 1] && grid[i + 1] == grid[i + 2]))
             return player;
     }
     // Check n in column
     for (int i = 0; i < N; i++) {
-        if ((grid[i] != 0 && grid[i + N] != 0 && grid[i + 2 * N] != 0) && (grid[i] == grid[i + N] == grid[i + 2 * N])) {
+        if ((grid[i] != 0 && grid[i + N] != 0 && grid[i + 2 * N] != 0) && (grid[i] == grid[i + N] && grid[i + N] == grid[i + 2 * N])) {
             return player;
         }
     }
     // Check n in diag
-    if ((grid[0] != 0 && grid[N + 1] != 0 && grid[2 * N + 2] != 0) && (grid[0] == grid[N + 1] == grid[2 * N + 2])) {
+    if ((grid[0] != 0 && grid[N + 1] != 0 && grid[2 * N + 2] != 0) && (grid[0] == grid[N + 1] && grid[N + 1] == grid[2 * N + 2])) {
         return player;
     }
     // Check n in diag opposite
-    if ((grid[N - 1] != 0 && grid[2 * N - 2] != 0 && grid[3 * N - 3] != 0) && (grid[N - 1] == grid[2 * N - 2] == grid[3 * N - 3])) {
+    if ((grid[N - 1] != 0 && grid[2 * N - 2] != 0 && grid[3 * N - 3] != 0) && (grid[N - 1] == grid[2 * N - 2] && grid[2 * N - 2] == grid[3 * N - 3])) {
         return player;
     }
     else {
