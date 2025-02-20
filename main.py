@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 #define endl '\n'
 using namespace std;
 
@@ -91,11 +92,11 @@ class Board {
             for (int j = 0; j < N; j++) {
                 cout << grid.at(i).at(j) << " | ";
             }
-            cout << '\n';
+            cout << endl;
             for (int j = 0; j < seperater_line.size(); j++) {
                 cout << seperater_line.at(i);
             }
-            cout << '\n';    
+            cout << endl;    
         }
     }
 
